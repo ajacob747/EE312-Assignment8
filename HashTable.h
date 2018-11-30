@@ -9,11 +9,11 @@ class HashTable {
     private:
         struct ValueNode
         {
-            String fileName;
-            String str;
+            string fileName;
+            string str;
             ValueNode* next;
         };
-        const int size = 1000000;
+        static const int size = 1000000;
         ValueNode* table[size];
 
     public:
