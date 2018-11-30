@@ -9,6 +9,7 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
+#include "HashTable.h"
 
 using namespace std;
 int getdir(string dir, vector<string> &files);
@@ -21,6 +22,7 @@ int main(int argc, char* argv[]){
     getdir(dir,files);
     stringstream words;
     ifstream file;
+    HashTable table;
     for (unsigned int i = 2;i < files.size();i++) {
         cout << i << files[i] << endl;
         file.open(dir+"\\"+files[i]);
@@ -31,12 +33,12 @@ int main(int argc, char* argv[]){
                 words >> word;
                 allWords.push_back(word);
             }
-            for(int i = 0; i<allWords.size()-n-1; i++){
+            for(int k = 0; k<allWords.size()-n-1; i++){
                 string wordGroup = "";
                 for(int j = 0; j<n; j++){
-                    wordGroup += allWords[i+j];
+                    wordGroup += allWords[k+j]+" ";
                 }
-                
+                table.put(files[i],wordGroup);
             }
         }
     }
