@@ -13,22 +13,22 @@ HashTable::HashTable()
 	}
 }
 
-int HashTable::hashingFunction(string words)
+int HashTable::hashingFunction(vector<string> x)
 {
-	vector<string> x;
-	string currword = "";
-	for(int i=0; i<words.size(); i++)
-	{
-		if(words[i]!=' ')
-		{
-			currword += words[i];
-		}
-		else
-		{
-			x.push_back(currword);
-			currword = "";
-		}
-	}
+//	vector<string> x;
+//	string currword = "";
+//	for(int i=0; i<words.size(); i++)
+//	{
+//		if(words[i]!=' ')
+//		{
+//			currword += words[i];
+//		}
+//		else
+//		{
+//			x.push_back(currword);
+//			currword = "";
+//		}
+//	}
 	int multiplier = 1;
 	int sum = 0;
 	for(int i=0; i<x.size(); i++)
@@ -49,7 +49,7 @@ int HashTable::hashingFunction(string words)
 	return sum;
 }
 
-void HashTable::put(string fileName, int fileNumber, string words)
+void HashTable::put(string fileName, int fileNumber, vector<string> words)
 {
 	int idx = hashingFunction(words);
 	ValueNode* trail = NULL;

@@ -15,9 +15,11 @@ using namespace std;
 int getdir(string dir, vector<string> &files);
 
 int main(int argc, char* argv[]){
-    string dir = string("sm_doc_set");
+    string ww;
+    ww += "??A??.0";
+    string dir = string(argv[1]);
     vector<string> files = vector<string>();
-    int n = 7;
+    int n = atoi(argv[2]);
     string word;
     getdir(dir,files);
     ifstream file;
@@ -31,18 +33,16 @@ int main(int argc, char* argv[]){
         if(file){
             cout << "Successfully opened " << files[i] << endl;
             vector<string> allWords;
-            stringstream words;
-            words<<file.rdbuf();
-            while(!words.eof()){
-                words >> word;
+            while(file >> word){
                 allWords.push_back(word);
             }
+            cout << allWords.size() << endl;
             for(int k = 0; k<allWords.size()-n-1; k++){
-                string wordGroup = "";
-                for(int j = 0; j<n; j++){
-                    wordGroup += allWords[k+j]+" ";
+                vector<string> group;
+                for(int j = 0; j<n; j++)   {
+                    group.push_back(allWords[k + j]);
                 }
-                table.put(files[i], i-2, wordGroup);
+                table.put(files[i], i-2, group);
             }
         }
         else {

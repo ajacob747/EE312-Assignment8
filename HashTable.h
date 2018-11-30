@@ -18,8 +18,8 @@ class HashTable {
 
     public:
     	HashTable();
-    	int hashingFunction(string words);
-    	void put(string fileName, int fileNumber, string words);
+    	int hashingFunction(vector<string> words);
+    	void put(string fileName, int fileNumber, vector<string> words);
     	void printContents();
     	int** getCollisions(int size);
     	~HashTable();    // Rule of 3 states that we need a copy constructor and copy assignment operator
