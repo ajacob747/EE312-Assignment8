@@ -17,7 +17,7 @@ int getdir(string dir, vector<string> &files);
 int main(int argc, char* argv[]){
     string dir = string("sm_doc_set");
     vector<string> files = vector<string>();
-    int n = atoi(argv[1]);
+    int n = 6;
     string word;
     getdir(dir,files);
     stringstream words;
@@ -25,7 +25,7 @@ int main(int argc, char* argv[]){
     HashTable table;
     for (unsigned int i = 2;i < files.size();i++) {
         cout << i << files[i] << endl;
-        file.open(dir+"\\"+files[i]);
+        file.open(dir+"/"+files[i]);
         if(file){
             vector<string> allWords;
             words<<file.rdbuf();
@@ -33,14 +33,16 @@ int main(int argc, char* argv[]){
                 words >> word;
                 allWords.push_back(word);
             }
-            for(int k = 0; k<allWords.size()-n-1; i++){
+            for(int k = 0; k<allWords.size()-n-1; k++){
                 string wordGroup = "";
                 for(int j = 0; j<n; j++){
                     wordGroup += allWords[k+j]+" ";
                 }
                 table.put(files[i],wordGroup);
+                cout << wordGroup <<endl;
             }
         }
+        file.close();
     }
     return 0;
 }
