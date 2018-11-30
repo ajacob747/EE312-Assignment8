@@ -9,7 +9,7 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
-#include "HashTable.h"
+#include "HashTable.cpp"
 
 using namespace std;
 int getdir(string dir, vector<string> &files);
@@ -17,14 +17,17 @@ int getdir(string dir, vector<string> &files);
 int main(int argc, char* argv[]){
     string dir = string("sm_doc_set");
     vector<string> files = vector<string>();
-    int n = 6;
+    int n = 7;
     string word;
     getdir(dir,files);
     ifstream file;
     HashTable table;
+    int** collisions;
     for (unsigned int i = 2;i < files.size();i++) {
         cout << i << " " << files[i] << endl;
-        file.open(dir+"/"+files[i]);
+        string path = dir+"/"+files[i];
+        const char* c = path.c_str();
+        file.open(c);
         if(file){
             cout << "Successfully opened " << files[i] << endl;
             vector<string> allWords;
@@ -39,7 +42,7 @@ int main(int argc, char* argv[]){
                 for(int j = 0; j<n; j++){
                     wordGroup += allWords[k+j]+" ";
                 }
-                table.put(files[i],wordGroup);
+                table.put(files[i], i-2, wordGroup);
             }
         }
         else {
@@ -47,7 +50,17 @@ int main(int argc, char* argv[]){
         }
         file.close();
     }
+
     table.printContents();
+
+    collisions = table.getCollisions(files.size()-2);
+
+    for(int i=0; i<files.size()-2; i++) {
+        for (int j = 0; j < files.size() - 2; j++) {
+            cout << " \t" << collisions[i][j];
+        }
+        cout << endl;
+    }
 
     return 0;
 }
