@@ -34,17 +34,22 @@ int HashTable::hashingFunction(string words)
 	for(int i=0; i<x.size(); i++)
 	{
 		int sub_sum = 0;
-		for(int j=0; j<x[i].size(); j++)
+		int end=0;
+		x[i].size() > 10 ? end=10 :end = x[i].size();
+
+		for(int j=0; j<end; j++)
 		{
 			sub_sum += x[i][j];
 		}
 		sum += sub_sum*multiplier;
 		multiplier *= 3;
+
+
 	}
 	return sum;
 }
 
-void HashTable::put(string fileName, string words)
+void HashTable::put(string fileName, int fileNumber, string words)
 {
 	int idx = hashingFunction(words);
 	ValueNode* trail = NULL;
@@ -54,6 +59,7 @@ void HashTable::put(string fileName, string words)
 		this->table[idx] = new ValueNode;
 		this->table[idx]->fileName = fileName;
 		this->table[idx]->next = NULL;
+		this->table[idx]->fileNumber = fileNumber;
 		return;
 	}
 	while(curr != NULL)
@@ -64,6 +70,7 @@ void HashTable::put(string fileName, string words)
 	trail->next = new ValueNode;
 	trail->next->next = NULL;
 	trail->next->fileName = fileName;
+	trail->next->fileNumber = fileNumber;
 }
 
 void HashTable::printContents()
@@ -75,6 +82,47 @@ void HashTable::printContents()
             cout << i << endl;
         }
     }
+}
+
+int** HashTable::getCollisions(int size)
+{
+	int** collisions;
+	collisions = new int*[size];
+	for(int i=0; i<size; i++)
+	{
+		collisions[i] = new int[size];
+	}
+	for(int i=0; i<size; i++)
+		for(int j=0; j<size; j++)
+		{
+			collisions[i][j] = 0;
+		}
+	for(int i=0; i<sizeof(table)/ sizeof(table[0]); i++)
+	{
+		ValueNode* curr = table[i];
+		if(curr==NULL)
+		{
+			continue;
+		}
+		if(curr->next == NULL)
+		{
+			continue;
+		}
+		vector<int> all;
+		while(curr != NULL)
+		{
+			all.push_back(curr->fileNumber);
+			curr = curr->next;
+		}
+		for(int j=0; j<all.size()-1; j++)
+		{
+			for(int k=j+1; k<all.size(); k++)
+			{
+				collisions[all[j]][all[k]] += 1;
+			}
+		}
+	}
+	return collisions;
 }
 
 HashTable::~HashTable()
