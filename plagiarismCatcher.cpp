@@ -20,7 +20,6 @@ int main(int argc, char* argv[]){
     int n = 6;
     string word;
     getdir(dir,files);
-    stringstream words;
     ifstream file;
     HashTable table;
     for (unsigned int i = 2;i < files.size();i++) {
@@ -29,6 +28,7 @@ int main(int argc, char* argv[]){
         if(file){
             cout << "Successfully opened " << files[i] << endl;
             vector<string> allWords;
+            stringstream words;
             words<<file.rdbuf();
             while(!words.eof()){
                 words >> word;
