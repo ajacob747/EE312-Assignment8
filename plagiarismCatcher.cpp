@@ -23,7 +23,7 @@ int main(int argc, char* argv[]){
     return 0;
 }
 
-int getdir (string dir, vector<string> &files)
+ int getdir (string dir, vector<string> &files)
 {
     DIR *dp;
     struct dirent *dirp;
