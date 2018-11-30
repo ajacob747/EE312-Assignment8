@@ -12,7 +12,7 @@ class HashTable {
             string fileName;
             ValueNode* next;
         };
-        static const int size = 1000000*1.5;
+        static const int size = 1500000;
         ValueNode* table[size];
 
     public:

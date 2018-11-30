@@ -18,6 +18,7 @@ int main(int argc, char* argv[]){
     string dir = string("sm_doc_set");
     vector<string> files = vector<string>();
     int n = 6;
+    int collision = 200;
     string word;
     getdir(dir,files);
     ifstream file;
@@ -40,7 +41,6 @@ int main(int argc, char* argv[]){
                     wordGroup += allWords[k+j]+" ";
                 }
                 table.put(files[i],wordGroup);
-                cout << wordGroup <<endl;
             }
             file.close();
         }
@@ -49,8 +49,8 @@ int main(int argc, char* argv[]){
         }
         file.close();
     }
-    table.printContents();
-
+//    table.printContents();
+    
     return 0;
 }
 
