@@ -9,7 +9,7 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
-#include "HashTable.cpp"
+#include "HashTable.h"
 
 using namespace std;
 int getdir(string dir, vector<string> &files);
