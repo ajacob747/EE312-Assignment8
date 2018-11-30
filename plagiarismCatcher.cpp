@@ -17,7 +17,7 @@ int getdir(string dir, vector<string> &files);
 int main(int argc, char* argv[]){
     string dir = string("sm_doc_set");
     vector<string> files = vector<string>();
-    int n = atoi(argv[1]);
+    int n = 6;
     string word;
     getdir(dir,files);
     ifstream file;
@@ -40,12 +40,14 @@ int main(int argc, char* argv[]){
                     wordGroup += allWords[k+j]+" ";
                 }
                 table.put(files[i],wordGroup);
+                cout << wordGroup <<endl;
             }
             file.close();
         }
         else {
             cout << "Failed to open " << files[i] << endl;
         }
+        file.close();
     }
     table.printContents();
 
