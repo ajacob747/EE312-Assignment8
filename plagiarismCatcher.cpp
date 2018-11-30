@@ -40,9 +40,7 @@ int main(int argc, char* argv[]){
                     wordGroup += allWords[k+j]+" ";
                 }
                 table.put(files[i],wordGroup);
-                cout << wordGroup <<endl;
             }
-            file.close();
         }
         else {
             cout << "Failed to open " << files[i] << endl;
