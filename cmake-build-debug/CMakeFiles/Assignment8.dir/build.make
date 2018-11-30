@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /cygdrive/c/Users/Andrew/.CLion2018.2/system/cygwin_cmake/bin/cmake.exe
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /cygdrive/c/Users/Andrew/.CLion2018.2/system/cygwin_cmake/bin/cmake.exe -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/Users/Andrew/CLionProjects/Assignment8
+CMAKE_SOURCE_DIR = /Users/sudeepnarala/CLionProjects/EE312-Assignment8
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/Users/Andrew/CLionProjects/Assignment8/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/sudeepnarala/CLionProjects/EE312-Assignment8/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Assignment8.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/Assignment8.dir/flags.make
 
 CMakeFiles/Assignment8.dir/plagiarismCatcher.cpp.o: CMakeFiles/Assignment8.dir/flags.make
 CMakeFiles/Assignment8.dir/plagiarismCatcher.cpp.o: ../plagiarismCatcher.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Andrew/CLionProjects/Assignment8/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Assignment8.dir/plagiarismCatcher.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Assignment8.dir/plagiarismCatcher.cpp.o -c /cygdrive/c/Users/Andrew/CLionProjects/Assignment8/plagiarismCatcher.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sudeepnarala/CLionProjects/EE312-Assignment8/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Assignment8.dir/plagiarismCatcher.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Assignment8.dir/plagiarismCatcher.cpp.o -c /Users/sudeepnarala/CLionProjects/EE312-Assignment8/plagiarismCatcher.cpp
 
 CMakeFiles/Assignment8.dir/plagiarismCatcher.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Assignment8.dir/plagiarismCatcher.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Andrew/CLionProjects/Assignment8/plagiarismCatcher.cpp > CMakeFiles/Assignment8.dir/plagiarismCatcher.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sudeepnarala/CLionProjects/EE312-Assignment8/plagiarismCatcher.cpp > CMakeFiles/Assignment8.dir/plagiarismCatcher.cpp.i
 
 CMakeFiles/Assignment8.dir/plagiarismCatcher.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Assignment8.dir/plagiarismCatcher.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Andrew/CLionProjects/Assignment8/plagiarismCatcher.cpp -o CMakeFiles/Assignment8.dir/plagiarismCatcher.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sudeepnarala/CLionProjects/EE312-Assignment8/plagiarismCatcher.cpp -o CMakeFiles/Assignment8.dir/plagiarismCatcher.cpp.s
 
 CMakeFiles/Assignment8.dir/HashTable.cpp.o: CMakeFiles/Assignment8.dir/flags.make
 CMakeFiles/Assignment8.dir/HashTable.cpp.o: ../HashTable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Andrew/CLionProjects/Assignment8/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Assignment8.dir/HashTable.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Assignment8.dir/HashTable.cpp.o -c /cygdrive/c/Users/Andrew/CLionProjects/Assignment8/HashTable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sudeepnarala/CLionProjects/EE312-Assignment8/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Assignment8.dir/HashTable.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Assignment8.dir/HashTable.cpp.o -c /Users/sudeepnarala/CLionProjects/EE312-Assignment8/HashTable.cpp
 
 CMakeFiles/Assignment8.dir/HashTable.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Assignment8.dir/HashTable.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Andrew/CLionProjects/Assignment8/HashTable.cpp > CMakeFiles/Assignment8.dir/HashTable.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sudeepnarala/CLionProjects/EE312-Assignment8/HashTable.cpp > CMakeFiles/Assignment8.dir/HashTable.cpp.i
 
 CMakeFiles/Assignment8.dir/HashTable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Assignment8.dir/HashTable.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Andrew/CLionProjects/Assignment8/HashTable.cpp -o CMakeFiles/Assignment8.dir/HashTable.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sudeepnarala/CLionProjects/EE312-Assignment8/HashTable.cpp -o CMakeFiles/Assignment8.dir/HashTable.cpp.s
 
 # Object files for target Assignment8
 Assignment8_OBJECTS = \
@@ -91,15 +91,15 @@ Assignment8_OBJECTS = \
 # External object files for target Assignment8
 Assignment8_EXTERNAL_OBJECTS =
 
-Assignment8.exe: CMakeFiles/Assignment8.dir/plagiarismCatcher.cpp.o
-Assignment8.exe: CMakeFiles/Assignment8.dir/HashTable.cpp.o
-Assignment8.exe: CMakeFiles/Assignment8.dir/build.make
-Assignment8.exe: CMakeFiles/Assignment8.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/Andrew/CLionProjects/Assignment8/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Assignment8.exe"
+Assignment8: CMakeFiles/Assignment8.dir/plagiarismCatcher.cpp.o
+Assignment8: CMakeFiles/Assignment8.dir/HashTable.cpp.o
+Assignment8: CMakeFiles/Assignment8.dir/build.make
+Assignment8: CMakeFiles/Assignment8.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sudeepnarala/CLionProjects/EE312-Assignment8/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Assignment8"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Assignment8.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/Assignment8.dir/build: Assignment8.exe
+CMakeFiles/Assignment8.dir/build: Assignment8
 
 .PHONY : CMakeFiles/Assignment8.dir/build
 
@@ -108,6 +108,6 @@ CMakeFiles/Assignment8.dir/clean:
 .PHONY : CMakeFiles/Assignment8.dir/clean
 
 CMakeFiles/Assignment8.dir/depend:
-	cd /cygdrive/c/Users/Andrew/CLionProjects/Assignment8/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /cygdrive/c/Users/Andrew/CLionProjects/Assignment8 /cygdrive/c/Users/Andrew/CLionProjects/Assignment8 /cygdrive/c/Users/Andrew/CLionProjects/Assignment8/cmake-build-debug /cygdrive/c/Users/Andrew/CLionProjects/Assignment8/cmake-build-debug /cygdrive/c/Users/Andrew/CLionProjects/Assignment8/cmake-build-debug/CMakeFiles/Assignment8.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/sudeepnarala/CLionProjects/EE312-Assignment8/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/sudeepnarala/CLionProjects/EE312-Assignment8 /Users/sudeepnarala/CLionProjects/EE312-Assignment8 /Users/sudeepnarala/CLionProjects/EE312-Assignment8/cmake-build-debug /Users/sudeepnarala/CLionProjects/EE312-Assignment8/cmake-build-debug /Users/sudeepnarala/CLionProjects/EE312-Assignment8/cmake-build-debug/CMakeFiles/Assignment8.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Assignment8.dir/depend
 

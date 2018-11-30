@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/cygdrive/c/Users/Andrew/CLionProjects/Assignment8/HashTable.cpp" "/cygdrive/c/Users/Andrew/CLionProjects/Assignment8/cmake-build-debug/CMakeFiles/Assignment8.dir/HashTable.cpp.o"
-  "/cygdrive/c/Users/Andrew/CLionProjects/Assignment8/plagiarismCatcher.cpp" "/cygdrive/c/Users/Andrew/CLionProjects/Assignment8/cmake-build-debug/CMakeFiles/Assignment8.dir/plagiarismCatcher.cpp.o"
+  "/Users/sudeepnarala/CLionProjects/EE312-Assignment8/HashTable.cpp" "/Users/sudeepnarala/CLionProjects/EE312-Assignment8/cmake-build-debug/CMakeFiles/Assignment8.dir/HashTable.cpp.o"
+  "/Users/sudeepnarala/CLionProjects/EE312-Assignment8/plagiarismCatcher.cpp" "/Users/sudeepnarala/CLionProjects/EE312-Assignment8/cmake-build-debug/CMakeFiles/Assignment8.dir/plagiarismCatcher.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
