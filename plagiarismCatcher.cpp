@@ -9,7 +9,7 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
-#include "HashTable.cpp"
+#include "HashTable.h"
 
 using namespace std;
 int getdir(string dir, vector<string> &files);
@@ -51,7 +51,8 @@ int main(int argc, char* argv[]){
         file.close();
     }
 
-    table.printContents();
+
+//    table.printContents();
 
     collisions = table.getCollisions(files.size()-2);
 
@@ -61,6 +62,7 @@ int main(int argc, char* argv[]){
         }
         cout << endl;
     }
+
 
     return 0;
 }
