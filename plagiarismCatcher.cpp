@@ -7,6 +7,8 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include <sstream>
+#include <fstream>
 
 using namespace std;
 int getdir(string dir, vector<string> &files);
@@ -14,11 +16,29 @@ int getdir(string dir, vector<string> &files);
 int main(int argc, char* argv[]){
     string dir = string("sm_doc_set");
     vector<string> files = vector<string>();
-
+    int n = atoi(argv[1]);
+    string word;
     getdir(dir,files);
-
-    for (unsigned int i = 0;i < files.size();i++) {
+    stringstream words;
+    ifstream file;
+    for (unsigned int i = 2;i < files.size();i++) {
         cout << i << files[i] << endl;
+        file.open(dir+"\\"+files[i]);
+        if(file){
+            vector<string> allWords;
+            words<<file.rdbuf();
+            while(!words.eof()){
+                words >> word;
+                allWords.push_back(word);
+            }
+            for(int i = 0; i<allWords.size()-n-1; i++){
+                string wordGroup = "";
+                for(int j = 0; j<n; j++){
+                    wordGroup += allWords[i+j];
+                }
+                
+            }
+        }
     }
     return 0;
 }
