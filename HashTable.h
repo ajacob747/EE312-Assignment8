@@ -9,16 +9,15 @@ class HashTable {
     private:
         struct ValueNode
         {
-            String fileName;
-            String str;
+            string fileName;
             ValueNode* next;
         };
-        const int size = 1000000;
+        static const int size = 1000000;
         ValueNode* table[size];
 
     public:
     	HashTable();
     	int hashingFunction(string words);
-    	void put(string words, string fileName);
+    	void put(string fileName, int idx);
     	~HashTable();    // Rule of 3 states that we need a copy constructor and copy assignment operator
 };

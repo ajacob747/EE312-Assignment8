@@ -1,1 +1,1 @@
-/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/Assignment8.dir/plagiarismCatcher.cpp.o CMakeFiles/Assignment8.dir/HashTable.cpp.o  -o Assignment8.exe -Wl,--out-implib,libAssignment8.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/Assignment8.dir/plagiarismCatcher.cpp.o CMakeFiles/Assignment8.dir/HashTable.cpp.o  -o Assignment8 
