@@ -54,6 +54,7 @@ void HashTable::put(string fileName, string words)
 		this->table[idx] = new ValueNode;
 		this->table[idx]->fileName = fileName;
 		this->table[idx]->next = NULL;
+		return;
 	}
 	while(curr != NULL)
 	{
@@ -63,6 +64,17 @@ void HashTable::put(string fileName, string words)
 	trail->next = new ValueNode;
 	trail->next->next = NULL;
 	trail->next->fileName = fileName;
+}
+
+void HashTable::printContents()
+{
+    for(int i=0; i<sizeof(table)/ sizeof(table[0]); i++)
+    {
+        if(table[i] != NULL)
+        {
+            cout << i << endl;
+        }
+    }
 }
 
 HashTable::~HashTable()

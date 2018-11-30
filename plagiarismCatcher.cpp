@@ -9,7 +9,7 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
-#include "HashTable.h"
+#include "HashTable.cpp"
 
 using namespace std;
 int getdir(string dir, vector<string> &files);
@@ -24,9 +24,10 @@ int main(int argc, char* argv[]){
     ifstream file;
     HashTable table;
     for (unsigned int i = 2;i < files.size();i++) {
-        cout << i << files[i] << endl;
+        cout << i << " " << files[i] << endl;
         file.open(dir+"/"+files[i]);
         if(file){
+            cout << "Successfully opened " << files[i] << endl;
             vector<string> allWords;
             words<<file.rdbuf();
             while(!words.eof()){
@@ -41,9 +42,15 @@ int main(int argc, char* argv[]){
                 table.put(files[i],wordGroup);
                 cout << wordGroup <<endl;
             }
+            file.close();
+        }
+        else {
+            cout << "Failed to open " << files[i] << endl;
         }
         file.close();
     }
+    table.printContents();
+
     return 0;
 }
 

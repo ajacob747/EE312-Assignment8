@@ -19,5 +19,6 @@ class HashTable {
     	HashTable();
     	int hashingFunction(string words);
     	void put(string fileName, string words);
+    	void printContents();
     	~HashTable();    // Rule of 3 states that we need a copy constructor and copy assignment operator
 };
