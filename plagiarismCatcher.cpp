@@ -20,18 +20,19 @@ int main(int argc, char* argv[]){
     string dir = string(argv[1]);
     vector<string> files = vector<string>();
     int n = atoi(argv[2]);
+    int threshold = atoi(argv[3]);
     string word;
     getdir(dir,files);
     ifstream file;
     HashTable table;
     int** collisions;
     for (unsigned int i = 2;i < files.size();i++) {
-        cout << i << " " << files[i] << endl;
+//        cout << i << " " << files[i] << endl;
         string path = dir+"/"+files[i];
         const char* c = path.c_str();
         file.open(c);
         if(file){
-            cout << "Successfully opened " << files[i] << endl;
+//            cout << "Successfully opened " << files[i] << endl;
             vector<string> allWords;
             while(file >> word){
                 allWords.push_back(word);
@@ -45,21 +46,25 @@ int main(int argc, char* argv[]){
             }
         }
         else {
-            cout << "Failed to open" << files[i] << endl;
+//            cout << "Failed to open" << files[i] << endl;
         }
         file.close();
     }
 
 
 //    table.printContents();
-
+//    cout << "___________________________" << endl;
     collisions = table.getCollisions(files.size()-2);
 
     for(int i=0; i<files.size()-2; i++) {
         for (int j = 0; j < files.size() - 2; j++) {
-            cout << " \t" << collisions[i][j];
+//            cout << " \t" << collisions[i][j];
+              if(collisions[i][j] >= threshold && i!=j)
+              {
+                  cout << files[i+2] << " plagiarized " << files[j+2] << endl;
+              }
         }
-        cout << endl;
+//        cout << endl;
     }
 
 
