@@ -9,7 +9,7 @@ class HashTable {
     private:
         struct ValueNode
         {
-            string fileName;
+//            string fileName;
             int fileNumber;
             ValueNode* next;
         };
@@ -18,7 +18,7 @@ class HashTable {
 
     public:
     	HashTable();
-    	int hashingFunction(vector<string> words);
+    	int hashingFunction(vector<string> x);
     	void put(string fileName, int fileNumber, vector<string> words);
     	void printContents();
     	int** getCollisions(int size);

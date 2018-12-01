@@ -15,36 +15,20 @@ HashTable::HashTable()
 
 int HashTable::hashingFunction(vector<string> x)
 {
-//	vector<string> x;
-//	string currword = "";
-//	for(int i=0; i<words.size(); i++)
-//	{
-//		if(words[i]!=' ')
-//		{
-//			currword += words[i];
-//		}
-//		else
-//		{
-//			x.push_back(currword);
-//			currword = "";
-//		}
-//	}
 	int multiplier = 1;
 	int sum = 0;
 	for(int i=0; i<x.size(); i++)
 	{
 		int sub_sum = 0;
 		int end=0;
-		x[i].size() > 10 ? end=10 :end = x[i].size();
+		x[i].size() > 10 ? end=10 : end = x[i].size();
 
 		for(int j=0; j<end; j++)
 		{
 			sub_sum += x[i][j];
 		}
 		sum += sub_sum*multiplier;
-		multiplier *= 3;
-
-
+		multiplier *= 37;
 	}
 	return sum;
 }
@@ -52,24 +36,30 @@ int HashTable::hashingFunction(vector<string> x)
 void HashTable::put(string fileName, int fileNumber, vector<string> words)
 {
 	int idx = hashingFunction(words);
+
+	idx = (idx%size + size)%size;
 	ValueNode* trail = NULL;
+
 	ValueNode* curr = this->table[idx];
+
 	if(curr==NULL)
 	{
 		this->table[idx] = new ValueNode;
-		this->table[idx]->fileName = fileName;
+//		this->table[idx]->fileName = fileName;
 		this->table[idx]->next = NULL;
 		this->table[idx]->fileNumber = fileNumber;
 		return;
 	}
+
 	while(curr != NULL)
 	{
 		trail = curr;
 		curr = curr->next;
 	}
+
 	trail->next = new ValueNode;
 	trail->next->next = NULL;
-	trail->next->fileName = fileName;
+//	trail->next->fileName = fileName;
 	trail->next->fileNumber = fileNumber;
 }
 
