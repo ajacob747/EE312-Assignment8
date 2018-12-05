@@ -1,0 +1,3 @@
+To run the program, type "make" and then "./plagiarismCatcher /path_to_dir num_of_words_in_chunk min_threshold".
+
+We made one main file to run the program (plagiarismCatcher.cpp) and a file to hash the data using a hashing function "HashTable.cpp".

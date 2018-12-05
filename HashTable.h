@@ -20,7 +20,6 @@ class HashTable {
     	HashTable();
     	int hashingFunction(vector<string> x);
     	void put(string fileName, int fileNumber, vector<string> words);
-    	void printContents();
     	int** getCollisions(int size);
-    	~HashTable();    // Rule of 3 states that we need a copy constructor and copy assignment operator
+    	~HashTable();
 };

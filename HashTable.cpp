@@ -19,6 +19,7 @@ int HashTable::hashingFunction(vector<string> x)
 	int sum = 0;
 	for(int i=0; i<x.size(); i++)
 	{
+
 		int sub_sum = 0;
 		int end=0;
 		x[i].size() > 10 ? end=10 : end = x[i].size();
@@ -45,7 +46,6 @@ void HashTable::put(string fileName, int fileNumber, vector<string> words)
 	if(curr==NULL)
 	{
 		this->table[idx] = new ValueNode;
-//		this->table[idx]->fileName = fileName;
 		this->table[idx]->next = NULL;
 		this->table[idx]->fileNumber = fileNumber;
 		return;
@@ -59,20 +59,9 @@ void HashTable::put(string fileName, int fileNumber, vector<string> words)
 
 	trail->next = new ValueNode;
 	trail->next->next = NULL;
-//	trail->next->fileName = fileName;
 	trail->next->fileNumber = fileNumber;
 }
 
-void HashTable::printContents()
-{
-    for(int i=0; i<sizeof(table)/ sizeof(table[0]); i++)
-    {
-        if(table[i] != NULL)
-        {
-            cout << i << endl;
-        }
-    }
-}
 
 int** HashTable::getCollisions(int size)
 {
